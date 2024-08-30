@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: boardify_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - boardify_network
+
+  api:
+    build:
+      context: ./api 
+    container_name: boardify_api
+    ports:
+      - "3000:3000" 
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/boardify 
+      - JWT_SECRET=your_jwt_secret
+      - NODE_ENV=development 
+    volumes:
+      - ./api:/usr/src/app 
+    depends_on:
+      - mongodb
+    networks:
+      - boardify_network
+
+networks:
+  boardify_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:

@@ -1,0 +1,49 @@
+{
+  "name": "boardify",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/interaction": "^6.1.11",
+    "@fullcalendar/react": "^6.1.11",
+    "@hookform/resolvers": "^3.3.4",
+    "framer-motion": "^11.5.4",
+    "js-base64": "^3.7.7",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-datepicker": "^6.6.0",
+    "react-docs-preview": "^1.0.3",
+    "react-dom": "^18.2.0",
+    "react-extract-colors": "^1.0.3",
+    "react-hook-form": "^7.51.2",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.22.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
+    "standart": "^6.1.0",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standart/eslintrc.json"
+  }
+}
